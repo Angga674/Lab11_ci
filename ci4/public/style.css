@@ -125,3 +125,32 @@ footer {
     padding: 15px 20px;
     font-size: 14px;
 }
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table th {
+    background: #2c6db8;
+    color: #fff;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #2c6db8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn-danger {
+    background: #d9534f;
+}

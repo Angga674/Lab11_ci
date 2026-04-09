@@ -6,8 +6,8 @@ class Page extends BaseController
     public function about()
     {
         return view('about', [
-            'title' => 'Halaman Abot',
-            'content' => 'Ini adalah halaman abaut yang menjelaskan tentang isi
+            'title' => 'Halaman About',
+            'content' => 'Ini adalah halaman about yang menjelaskan tentang isi
 halaman ini.'
         ]);
     }
@@ -23,4 +23,18 @@ halaman ini.'
     {
         echo "ini halaman Term of Services";
     }
+    public function view($slug)
+    {
+        $model = new ArtikelModel();
+        $artikel = $model->where([
+            'slug' => $slug
+        ])->first();
+        // Menampilkan error apabila data tidak ada.
+        if (!$artikel) {
+            throw PageNotFoundException::forPageNotFound();
+        }
+        $title = $artikel['judul'];
+        return view('artikel/detail', compact('artikel', 'title'));
+    }
+    
 }

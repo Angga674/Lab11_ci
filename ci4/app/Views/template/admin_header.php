@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?? 'Portal Berita'; ?></title>
+    <title><?= $title ?? 'Admin Portal Berita'; ?></title>
     <link rel="stylesheet" href="<?= base_url('style.css'); ?>">
 </head>
 
 <body>
     <div id="container">
         <header>
-            <h1>Portal Berita</h1>
+            <h1>Admin Portal Berita</h1>
         </header>
+
         <nav>
-            <a href="<?= base_url('/'); ?>">Home</a>
-            <a href="<?= base_url('/artikel'); ?>" class="active">Artikel</a>
-            <a href="#">About</a>
-            <a href="#">Kontak</a>
+            <a href="<?= base_url('/admin/artikel'); ?>" class="active">Dashboard</a>
+            <a href="<?= base_url('/admin/artikel'); ?>">Artikel</a>
+            <a href="<?= base_url('/admin/artikel/add'); ?>">Tambah Artikel</a>
         </nav>
+
         <section id="wrapper">
             <section id="main">
